@@ -1,9 +1,68 @@
-h3{
-    color:#F5EDE5;
+.achievement-section {
+    padding: 40px 6% 80px;
+    max-width: 1140px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    text-align: center;
 }
 
-.AchieveCard{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+/* Section Heading */
+.achievement-heading {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.achievement-subtitle {
+    display: inline-block;
+    font-size: 0.82rem;
+    letter-spacing: 2.5px;
+    color: #D5B98C;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    opacity: 0.85;
+}
+
+.achievement-title {
+    font-size: 2.6rem;
+    color: #F5EDE5;
+    margin: 0 0 10px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.achievement-desc {
+    color: #c9bdb5;
+    font-size: 1.05rem;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Milestone Cards Grid */
+.AchieveCard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 26px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .achievement-section {
+        padding: 30px 4% 60px;
+    }
+
+    .achievement-title {
+        font-size: 2.1rem;
+    }
+
+    .achievement-desc {
+        font-size: 0.95rem;
+    }
+
+    .AchieveCard {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
 }

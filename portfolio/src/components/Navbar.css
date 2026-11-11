@@ -1,7 +1,53 @@
-.navbar{
-    background-color: #241416;
-    border:1px solid #D5B98C;
-    height:50px;
-    display: flex;
-    justify-content: center;
+/* Sticky Top Header */
+.navbar-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 16px 20px 10px;
+  box-sizing: border-box;
+  pointer-events: none; /* Let page underneath be clickable except on the navbar pill */
+}
+
+/* Floating Glass Capsule Navbar */
+.navbar {
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-pill-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 6px 10px;
+  background: rgba(36, 20, 22, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(213, 185, 140, 0.28);
+  border-radius: 999px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45), 0 0 20px rgba(213, 185, 140, 0.08);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar-pill-container:hover {
+  border-color: rgba(213, 185, 140, 0.45);
+}
+
+/* Mobile adjustments */
+@media (max-width: 680px) {
+  .navbar-header {
+    padding: 10px 10px 6px;
+  }
+
+  .navbar-pill-container {
+    gap: 4px;
+    padding: 4px 6px;
+    border-radius: 20px;
+    flex-wrap: wrap;
+  }
 }

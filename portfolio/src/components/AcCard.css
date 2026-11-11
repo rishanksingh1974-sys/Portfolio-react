@@ -1,14 +1,88 @@
-.AcCard{
-    height:180px;
-    width:500px;
-    border: 1px solid #D5B98C;
-    margin-top: 10px;
-    margin-left: 25px;
-    border-radius: 20px;
-    padding: 5px 5px 5px 5px;
-}
-.Ac-icon{
-    font-size: larger;
-    
+/* Milestone Card */
+.AcCard {
+    background: linear-gradient(160deg, #321F21 0%, #261719 100%);
+    border: 1px solid rgba(213, 185, 140, 0.25);
+    border-radius: 18px;
+    padding: 26px 24px;
+    box-sizing: border-box;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
 }
 
+.AcCard:hover {
+    transform: translateY(-6px);
+    border-color: rgba(213, 185, 140, 0.6);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.55), 0 0 18px rgba(213, 185, 140, 0.12);
+}
+
+/* Card Header */
+.Ac-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.Ac-icon-box {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: rgba(213, 185, 140, 0.1);
+    border: 1px solid rgba(213, 185, 140, 0.28);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.35rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.Ac-badge {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #D5B98C;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    background: rgba(213, 185, 140, 0.08);
+    border: 1px solid rgba(213, 185, 140, 0.2);
+    padding: 4px 12px;
+    border-radius: 999px;
+}
+
+/* Milestone Value */
+.Ac-value {
+    font-size: 1.65rem;
+    font-weight: 700;
+    color: #F5EDE5;
+    margin: 0 0 10px;
+    letter-spacing: -0.3px;
+    line-height: 1.25;
+    transition: color 0.25s ease;
+}
+
+.AcCard:hover .Ac-value {
+    color: #D5B98C;
+}
+
+/* Description */
+.Ac-desc {
+    font-size: 0.92rem;
+    line-height: 1.65;
+    color: #D4C3BC;
+    margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .AcCard {
+        padding: 20px;
+    }
+
+    .Ac-value {
+        font-size: 1.45rem;
+    }
+}

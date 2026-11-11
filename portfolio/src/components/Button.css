@@ -1,6 +1,54 @@
-.button{
-    background-color: #D5B98C;
-    color:#F5EDE5;
-    margin-right: 15px;
-    width:100px;
+/* Navigation Tab Button */
+.button,
+.nav-button {
+  background: transparent;
+  color: #D6C5BE;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  padding: 8px 18px;
+  font-size: 0.88rem;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  user-select: none;
+  width: auto;
+  margin-right: 0;
+}
+
+/* Inactive button hover */
+.nav-button:hover:not(.active) {
+  color: #F5EDE5;
+  background: rgba(213, 185, 140, 0.12);
+  border-color: rgba(213, 185, 140, 0.28);
+  transform: translateY(-1px);
+}
+
+/* Active Button Indicator with Champagne Gold Glow */
+.nav-button.active {
+  background: #D5B98C;
+  color: #241416;
+  border-color: #D5B98C;
+  font-weight: 700;
+  box-shadow: 0 2px 14px rgba(213, 185, 140, 0.5), 0 0 22px rgba(213, 185, 140, 0.3);
+  transform: translateY(-1px);
+}
+
+/* Subtle click feedback */
+.nav-button:active {
+  transform: scale(0.96);
+}
+
+/* Responsive adjustment for small screens */
+@media (max-width: 680px) {
+  .button,
+  .nav-button {
+    padding: 6px 12px;
+    font-size: 0.78rem;
+  }
 }

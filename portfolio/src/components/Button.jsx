@@ -1,6 +1,14 @@
-import "./Button.css"
-export default function Button({name,handleClick}){
-    return(
-        <button className="button" onClick={handleClick} name={name}>{name}</button>
-    )
+import "./Button.css";
+
+export default function Button({ name, handleClick, isActive = false }) {
+  return (
+    <button
+      className={`button nav-button ${isActive ? "active" : ""}`}
+      onClick={handleClick}
+      name={name}
+      type="button"
+    >
+      {name}
+    </button>
+  );
 }

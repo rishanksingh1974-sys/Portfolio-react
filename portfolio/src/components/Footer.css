@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Dancing+Script:wght@600;700&display=swap');
+
+/* Footer Container */
+.footer-container {
+    width: 100%;
+    margin-top: 60px;
+    padding: 35px 20px 40px;
+    background: linear-gradient(180deg, rgba(36, 20, 22, 0.6) 0%, #1c0e10 100%);
+    border-top: 1px solid rgba(213, 185, 140, 0.22);
+    box-sizing: border-box;
+    text-align: center;
+    position: relative;
+}
+
+.footer-content {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Cursive Signature */
+.footer-signature-wrapper {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin-bottom: 4px;
+}
+
+.footer-signature {
+    font-family: 'Dancing Script', 'Caveat', 'Brush Script MT', 'Segoe Script', cursive;
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #D5B98C;
+    letter-spacing: 1px;
+    text-shadow: 0 0 14px rgba(213, 185, 140, 0.35), 0 2px 8px rgba(0, 0, 0, 0.5);
+    line-height: 1.1;
+    transform: rotate(-2deg);
+    transition: transform 0.3s ease, color 0.3s ease;
+    user-select: none;
+}
+
+.footer-signature:hover {
+    transform: rotate(0deg) scale(1.06);
+    color: #F3DCB8;
+}
+
+/* Motto */
+.footer-motto {
+    font-size: 0.95rem;
+    color: #D4C3BC;
+    font-weight: 500;
+    letter-spacing: 0.4px;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Subtle separator line */
+.footer-divider {
+    width: 70px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(213, 185, 140, 0.45), transparent);
+    margin: 6px 0;
+}
+
+/* Copyright text */
+.footer-copyright {
+    font-size: 0.84rem;
+    color: #A8958E;
+    margin: 0;
+    letter-spacing: 0.3px;
+}
+
+.gold-text {
+    color: #D5B98C;
+    font-weight: 600;
+}
+
+/* Portfolio app flex layout for sticky footer */
+.portfolio-app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main-content {
+    flex: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .footer-container {
+        margin-top: 40px;
+        padding: 28px 16px 32px;
+    }
+
+    .footer-signature {
+        font-size: 2.3rem;
+    }
+
+    .footer-motto {
+        font-size: 0.86rem;
+    }
+
+    .footer-copyright {
+        font-size: 0.78rem;
+    }
+}

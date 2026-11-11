@@ -1,11 +1,12 @@
 import Navbar from "./components/navbar";
-import Home from "./components/Home.jsx"
-
+import Home from "./components/Home.jsx";
 import Skills from "./components/Skills.jsx";
-import Project from "./components/Project.jsx";
+import Project from "./components/Projects.jsx";
 import Contact from "./components/Contact.jsx";
-import { useState } from "react";
 import Achievement from "./components/Achievement.jsx";
+import Footer from "./components/Footer.jsx";
+import { useState } from "react";
+
 export default function Components() {
     let [hide, setHide] = useState({
         Home: false,
@@ -18,25 +19,30 @@ export default function Components() {
     let handleClick = (event) => {
         let selected = event.target.name;
         console.log(selected);
-        setHide((prev) => ({
-            ...prev,
+        setHide({
             Home: true,
             Achievement: true,
             Skills: true,
             Project: true,
             Contact: true,
             [selected]: false
-        }));
+        });
     };
-    return (
-        <>
-            <Navbar handleClick={handleClick} />
-            {!hide.Home && <Home />}
-            {!hide.Achievement && <Achievement />}
-            {!hide.Skills && <Skills />}
-            {!hide.Project && <Project/>}
-            {!hide.Contact && <Contact/>}
 
-        </>
+    // Determine the active tab
+    const activeTab = Object.keys(hide).find((key) => !hide[key]) || "Home";
+
+    return (
+        <div className="portfolio-app">
+            <Navbar handleClick={handleClick} activeTab={activeTab} />
+            <main className="main-content">
+                {!hide.Home && <Home />}
+                {!hide.Achievement && <Achievement />}
+                {!hide.Skills && <Skills />}
+                {!hide.Project && <Project />}
+                {!hide.Contact && <Contact />}
+            </main>
+            <Footer />
+        </div>
     );
 }
