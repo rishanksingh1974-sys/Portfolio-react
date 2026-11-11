@@ -1,4 +1,4 @@
-import ContactCard from "./ContactCard";
+import ContactCard from "./ContactCard.jsx";
 import "./ContactCard.css";
 
 export default function Contact() {

@@ -1,5 +1,5 @@
-import Button from "./Button";
-import "./navbar.css";
+import Button from "./Button.jsx";
+import "./Navbar.css";
 
 export default function Navbar({ handleClick, activeTab = "Home" }) {
   const navItems = ["Home", "Skills", "Achievement", "Project", "Contact"];

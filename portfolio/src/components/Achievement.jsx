@@ -1,5 +1,5 @@
 import "./Achievement.css";
-import AcCard from "./AcCard";
+import AcCard from "./AcCard.jsx";
 
 export default function Achievement() {
     const achievements = [
