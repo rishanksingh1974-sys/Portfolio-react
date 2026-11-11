@@ -1,0 +1,46 @@
+.Skills {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 4px 4px 4px 4px;
+    justify-content: center;
+}
+
+.beta{
+    border: 1px solid #D5B98C;
+    width: fit-content;
+    min-width: 100px;
+    padding: 4px 10px;
+    text-align: center;
+    margin: 8px auto;
+    border-radius: 4px;
+}
+.SkillCard {
+    text-align: center;
+    border: 1px solid #D5B98C;
+    height: 350px;
+    width: 500px;
+    margin-top: 20px;
+    margin-left: 20px;
+    border-radius: 20px;
+   
+}
+.SkillCard:hover{
+    background-color: #321F21;
+    height: 360px;
+    width: 510px;
+    color: #F5EDE5;
+}
+.beta:hover{
+    color:#D5B98C;
+    width:150px;
+}
+
+.aplha:hover{
+    color:#D5B98C;
+    
+}
+
+.gama:hover{
+    color:#D5B98C;
+   
+}

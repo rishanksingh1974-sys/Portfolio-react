@@ -1,0 +1,9 @@
+h3{
+    color:#F5EDE5;
+}
+
+.AchieveCard{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}

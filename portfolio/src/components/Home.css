@@ -1,0 +1,49 @@
+.homeBox{
+    border:1px solid #D5B98C;
+    height:540px;
+    width:500px;
+   
+    margin-top:20px;
+    border-radius: 20px;
+    background-color: #321F21;
+    margin-right:20px;
+    padding: 5px 5px 5px 5px;
+}
+.Home{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+img{
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+.home-img{
+    display: flex;
+    flex-direction: column;
+}
+
+.homeCard{
+    display: flex;
+    flex-wrap: wrap ;
+    justify-content: center;
+
+}
+
+.Card{
+    height:150px;
+    width: 200px;
+    margin-top: 20px;
+    margin-left:10px;
+    border:1px solid #D5B98C;
+    border-radius:20px;
+
+}
+
+.Card:hover{
+    height: 160px;
+    width:210px;
+    background-color: #D5B98C;
+}

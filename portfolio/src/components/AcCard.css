@@ -1,0 +1,14 @@
+.AcCard{
+    height:180px;
+    width:500px;
+    border: 1px solid #D5B98C;
+    margin-top: 10px;
+    margin-left: 25px;
+    border-radius: 20px;
+    padding: 5px 5px 5px 5px;
+}
+.Ac-icon{
+    font-size: larger;
+    
+}
+
